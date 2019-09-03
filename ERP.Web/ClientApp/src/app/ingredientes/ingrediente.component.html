@@ -1,0 +1,50 @@
+<h1 class="h4 titulo col-md-5">Cadastro de Ingrediente</h1>
+  <form>
+    <div class="form-group">
+      <label for="inputNome" class="sr-only">Nome</label>
+      <input type="text" id="inputNome"
+             name="nomeIngrediente"
+             placeholder="Nome do Produto"
+             class="form-control mb-2 col-md-4"
+             [ngClass]=""
+             [(ngModel)]="ingrediente.nome"
+             #nome="ngModel"
+             required />
+
+      <div class="invalid-feedback mb-2 col-md-5" *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+        <div *ngIf="nome.errors.required">
+          Nome do Ingrediente é de preenchimento obrigatório
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputDescricao" class="sr-only">Descrição</label>
+      <input type="text" id="inputDescricao"
+             name="descricaoIngrediente"
+             placeholder="Descrição do ingrediente"
+             class="form-control mb-2 col-md-4"
+             [ngClass]=""
+             [(ngModel)]="ingrediente.descricao"
+             #descricao="ngModel"
+             required />
+    </div>
+    <div class="form-group">
+      <label for="inputPreco" class="sr-only">Preço</label>
+      <input type="number"
+             id="inputPreco"
+             name="precoIngrediente"
+             placeholder="Preço do Ingrediente"
+             class="form-control mb-2 col-md-2"
+             [ngClass]=""
+             [(ngModel)]="ingrediente.preco"
+             #preco="ngModel"
+             required />
+
+      <div class="invalid-feedback mb-2" *ngIf="preco.invalid && (preco.dirty || preco.touched)">
+        <div *ngIf="preco.errors.required">
+          Preço do ingrediente é de preenchimento obrigatório
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" (click)="cadastrar">Cadastrar</button>
+  </form>
