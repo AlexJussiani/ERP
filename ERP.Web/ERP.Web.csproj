@@ -25,16 +25,39 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\cliente\cliente.component.ts" />
     <None Remove="ClientApp\src\app\ingrediente.component.ts" />
     <None Remove="ClientApp\src\app\ingredientes\ingrediente.component.ts" />
     <None Remove="ClientApp\src\app\ingredientes\ingrediente.ts" />
+    <None Remove="ClientApp\src\app\lanche\lanche.component.ts" />
+    <None Remove="ClientApp\src\app\modelo\cliente.ts" />
+    <None Remove="ClientApp\src\app\modelo\lanche.ts" />
+    <None Remove="ClientApp\src\servicos\cliente\cliente.servico.ts" />
     <None Remove="ClientApp\src\servicos\ingrediente\ingrediente.servico.ts" />
+    <None Remove="ClientApp\src\servicos\ingrediente\lanche.servico.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\app\ingrediente.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\cliente\cliente.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\ingredientes\ingrediente.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\lanche\lanche.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\cliente.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\lanche.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\modelo\ingrediente.ts" />
+    <TypeScriptCompile Include="ClientApp\src\servicos\cliente\cliente.servico.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\servicos\lanche\lanche.servico.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\servicos\ingrediente\ingrediente.servico.ts" />
   </ItemGroup>
 

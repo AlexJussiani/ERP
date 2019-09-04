@@ -1,0 +1,109 @@
+<div class="cotainer">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">Cadastro de Clientes</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group ">
+              <label for="inputNome" class="sr-only">Nome</label>
+              <input type="text" id="inputNome"
+                     name="nomeCliente"
+                     placeholder="Nome do Cliente"
+                     class="form-control"
+                     [ngClass]=""
+                     [(ngModel)]="cliente.nome"
+                     #nome="ngModel"
+                     required />
+
+              <div class="invalid-feedback mb-2" *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+                <div *ngIf="nome.errors.required">
+                  Nome do Cliente é de preenchimento obrigatório
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">Email</label>
+              <input type="email" id="inputEmail"
+                     name="email" placeholder="Email"
+                     class="form-control mb-1"
+                     [ngClass]="{
+            'is-invalid':email.invalid && (email.durty || email.touched),
+            'is-valid':email.valid && (email.durty || email.touched)
+           }"
+                     [(ngModel)]="cliente.email"
+                     #email="ngModel"
+                     email
+                     required />
+
+              <div class="invalid-feedback" *ngIf="email.invalid && (email.durty || email.touched)">
+                <div *ngIf="email.errors.required">
+                  Email é de preenchimento obrigatório
+                </div>
+                <div *ngIf="email.errors.email">
+                  Email não esta no formato correto
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="feminino" id="feminino" value="feminino" checked>
+                <label class="form-check-label" for="radios-0">
+                  Feminino
+                </label>
+              </div>
+              <div class="form-check mb-2 col-md-10">
+                <input class="form-check-input " type="radio" name="masculino" id="masculino" value="masculino">
+                <label class="form-check-label" for="radios-1">
+                  Masculino
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCPF" class="sr-only">CPF</label>
+              <input type="text" id="inputCpf"
+                     name="cpfCliente"
+                     placeholder="CPF do Cliente"
+                     class="form-control mb-2"
+                     [ngClass]=""
+                     [(ngModel)]="cliente.cpf"
+                     #nome="ngModel"
+                     required />
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputTelefone" class="sr-only">Telefone</label>
+              <input type="text" id="inputCpf"
+                     name="telefoneCliente"
+                     placeholder="Telefone do Cliente"
+                     class="form-control mb-2"
+                     [ngClass]=""
+                     [(ngModel)]="cliente.telefone"
+                     #nome="ngModel"
+                     required />
+            </div>
+
+            <div class="form-group">
+              <label for="inputEndereco" class="sr-only">Endereco</label>
+              <input type="text" id="inputEndereco"
+                     name="enderecoCliente"
+                     placeholder="Endereco do Cliente"
+                     class="form-control mb-2"
+                     [ngClass]=""
+                     [(ngModel)]="cliente.endereco"
+                     #nome="ngModel"
+                     required />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-primary" (click)="cadastrar">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
