@@ -10,18 +10,21 @@ namespace ERP.Web
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             var builder = new ConfigurationBuilder();
-        }
+            builder.AddJsonFile("config.json", optional:false, reloadOnChange:true);
 
-        public IConfiguration Configuration { get; }
+            Configuration = builder.Build();
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
+            /ervices.AddDbContext<ERPContexto>
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
