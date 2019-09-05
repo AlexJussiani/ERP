@@ -40,7 +40,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ERP.Repositorio\ERP.Repositorio.csproj" />
-    <ProjectReference Include="..\ERP\ERP.Dominio.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -65,6 +64,12 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\servicos\ingrediente\ingrediente.servico.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

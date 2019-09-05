@@ -1,4 +1,4 @@
-﻿using ERP.Dominio.Contrato;
+﻿using ERP.Dominio.Entidades;
 using ERP.Repositorio.Config;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ERP.Repositorio.Contexto
 {
-    class ERPContexto : DbContext
+    public class ERPContexto : DbContext
     {
         public DbSet<Lanches> lanches { get; set; }
         public DbSet<Ingredientes> ingredientes { get; set; }

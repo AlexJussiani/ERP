@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ERP.Dominio.Contrato
+namespace ERP.Dominio.Entidades
 {
     public class Clientes
     {

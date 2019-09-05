@@ -1,4 +1,4 @@
-﻿using ERP.Dominio.Contrato;
+﻿using ERP.Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -17,7 +17,7 @@ namespace ERP.Repositorio.Config
 
             builder
                 .Property(p => p.preco)
-                .IsRequired()
+                .IsRequired();
         }
     }
 }

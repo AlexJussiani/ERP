@@ -1,4 +1,4 @@
-﻿using ERP.Dominio.Contrato;
+﻿using ERP.Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
