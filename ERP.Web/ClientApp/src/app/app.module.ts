@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { IngredienteComponent } from './ingredientes/ingrediente.component';
 import { LancheComponent } from './lanche/lanche.component';
 import { ClienteComponent } from './cliente/cliente.component'; 
+import { IngredienteServico } from '../servicos/ingrediente/ingrediente.servico';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { ClienteComponent } from './cliente/cliente.component';
       { path: 'cliente', component: ClienteComponent }
     ])
   ],
-  providers: [/*IngredienteServico*/],
+  providers: [IngredienteServico],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

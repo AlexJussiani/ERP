@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ERP.Dominio.Contrato
 {
-    public interface IItensLanches : IBaseRepositorio<ItensLanches>
+    public interface IItensLanchesRepositorio : IBaseRepositorio<ItensLanches>
     {
     }
 }

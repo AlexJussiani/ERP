@@ -28,8 +28,8 @@
   <ItemGroup>
     <None Remove="ClientApp\src\app\cliente\cliente.component.ts" />
     <None Remove="ClientApp\src\app\ingrediente.component.ts" />
-    <None Remove="ClientApp\src\app\ingredientes\ingrediente.component.ts" />
-    <None Remove="ClientApp\src\app\ingredientes\ingrediente.ts" />
+    <None Remove="ClientApp\src\app\ingrediente\ingrediente.component.ts" />
+    <None Remove="ClientApp\src\app\ingrediente\ingrediente.ts" />
     <None Remove="ClientApp\src\app\lanche\lanche.component.ts" />
     <None Remove="ClientApp\src\app\modelo\cliente.ts" />
     <None Remove="ClientApp\src\app\modelo\lanche.ts" />
@@ -46,7 +46,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\cliente\cliente.component.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="ClientApp\src\app\ingredientes\ingrediente.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\ingrediente\ingrediente.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\lanche\lanche.component.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>

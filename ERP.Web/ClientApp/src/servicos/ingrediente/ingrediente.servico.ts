@@ -3,6 +3,12 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Ingrediente } from "../../app/modelo/ingrediente";
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+};
+
 @Injectable({
   providedIn: "root"
 })
@@ -20,11 +26,11 @@ export class IngredienteServico implements OnInit {
   }
 
   get headers(): HttpHeaders {
-    return new HttpHeaders().set('content-type', 'applicaton/json')
+    return new HttpHeaders().set('content-type', 'applicaton/json');
   }
-
+   
   public cadastrar(ingrediente: Ingrediente): Observable<Ingrediente> {
-    return this.http.post<Ingrediente>(this._baseUrl + "api/ingrediente/cadastrar", JSON.stringify(ingrediente), { headers: this.headers });
+    return this.http.post<Ingrediente>(this._baseUrl + "api/ingrediente/cadastrar", JSON.stringify(ingrediente), httpOptions);
   }
 
   public salvar(ingrediente: Ingrediente): Observable<Ingrediente> {

@@ -5,7 +5,7 @@ using ERP.Dominio.Entidades;
 
 namespace ERP.Dominio.Contrato
 {
-    public interface ILanches : IBaseRepositorio<Lanches>
+    public interface IIngredientesRepositorio : IBaseRepositorio<Ingredientes>
     {
     }
 }

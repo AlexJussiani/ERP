@@ -5,7 +5,7 @@ using ERP.Dominio.Entidades;
 
 namespace ERP.Dominio.Contrato
 {
-    public interface IClientes : IBaseRepositorio<Clientes>
+    public interface IClientesRepositorio : IBaseRepositorio<Clientes>
     {
     }
 }

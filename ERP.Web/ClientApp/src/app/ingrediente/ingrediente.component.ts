@@ -9,7 +9,8 @@ import { IngredienteServico } from "../../servicos/ingrediente/ingrediente.servi
 })
 
 export class IngredienteComponent implements OnInit {
-  public ingrediente: Ingrediente
+  public ingrediente: Ingrediente;
+  public ativar_spinner: boolean;
 
   constructor(private ingredienteServico: IngredienteServico) {
 
@@ -17,19 +18,20 @@ export class IngredienteComponent implements OnInit {
 
   ngOnInit(): void {
     this.ingrediente = new Ingrediente();
-
+     
   }
   public cadastrar() {
-    //this.produto
-    //this.produtoServico.cadastrar(this.produto)
-    //  .subscribe(
-    //    produtoJson => {
-    //      console.log(produtoJson);
-
-    //    },
-    //    e => {
-    //      console.log(e.error);
-    //    }
-    //  );
+    this.ativar_spinner = true;
+    this.ingredienteServico.cadastrar(this.ingrediente)
+      .subscribe(
+        retorno => {
+          this.ativar_spinner = false;
+          alert("teste2");
+        },
+        e => {
+          alert("teste1");
+          this.ativar_spinner = false;
+        }
+    );
   }
 }
