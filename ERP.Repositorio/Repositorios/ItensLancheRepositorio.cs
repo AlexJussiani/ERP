@@ -7,11 +7,10 @@ using System.Text;
 
 namespace ERP.Repositorio.Repositorios
 {
-    class IngredienteRepositorio : BaseRepositorio<Ingredientes>, IIngredientesRepositorio
+    class ItensLancheRepositorio : BaseRepositorio<ItensLanches>, IItensLanchesRepositorio
     {
-
-        public IngredienteRepositorio(ERPContexto erpContexto) : base(erpContexto)
-        {
-        }
+        public ItensLancheRepositorio(ERPContexto erpContexto) : base(erpContexto)
+       {
+       }
     }
 }

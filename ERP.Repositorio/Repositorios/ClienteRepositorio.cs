@@ -7,10 +7,9 @@ using System.Text;
 
 namespace ERP.Repositorio.Repositorios
 {
-    class IngredienteRepositorio : BaseRepositorio<Ingredientes>, IIngredientesRepositorio
+    class ClienteRepositorio : BaseRepositorio<Clientes>, IClientesRepositorio
     {
-
-        public IngredienteRepositorio(ERPContexto erpContexto) : base(erpContexto)
+        public ClienteRepositorio(ERPContexto erpContexto) : base(erpContexto)
         {
         }
     }

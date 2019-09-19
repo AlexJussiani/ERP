@@ -1,4 +1,5 @@
 ﻿using ERP.Dominio.Contrato;
+using ERP.Dominio.Entidades;
 using ERP.Repositorio.Contexto;
 using System;
 using System.Collections.Generic;
@@ -6,9 +7,9 @@ using System.Text;
 
 namespace ERP.Repositorio.Repositorios
 {
-    public class ClientesRepositorio : BaseRepositorio<Clientes>, IClientesRepositorio
+    class LancheRepositorio : BaseRepositorio<Lanches>, ILanchesRepositorio
     {
-        public ClientesRepositorio(ERPContexto erpContexto) : base(erpContexto)
+        public LancheRepositorio(ERPContexto erpContexto) : base(erpContexto)
         {
         }
     }

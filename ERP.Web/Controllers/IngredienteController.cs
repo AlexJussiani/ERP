@@ -5,7 +5,7 @@ using System;
 
 namespace ERP.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[Controller]")]
     public class IngredienteController : Controller
     {
         private readonly IIngredientesRepositorio _ingredienteRepositorio;

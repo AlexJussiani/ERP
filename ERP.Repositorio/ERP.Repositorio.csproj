@@ -5,22 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Repositorios\BaseRepositorio.cs" />
-    <Compile Remove="Repositorios\ClientesRepositorio.cs" />
-    <Compile Remove="Repositorios\IngredienteRepositorio.cs" />
-    <Compile Remove="Repositorios\ItensLanchesRepositorio.cs" />
-    <Compile Remove="Repositorios\lanchesRepositorio.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Repositorios\BaseRepositorio.cs" />
-    <None Include="Repositorios\ItensLanchesRepositorio.cs" />
-    <None Include="Repositorios\ClientesRepositorio.cs" />
-    <None Include="Repositorios\lanchesRepositorio.cs" />
-    <None Include="Repositorios\IngredienteRepositorio.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
   </ItemGroup>
 
